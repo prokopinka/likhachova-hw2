@@ -1,3 +1,12 @@
 table, th, td {
     border: solid 1px black;
 }
+
+.box-for-name {
+    margin-top: 20px;
+    display: block;
+}
+
+.checkbox {
+    font-weight: bold;
+    }
