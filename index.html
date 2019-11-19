@@ -41,36 +41,30 @@
         </tbody>
     </table>
     <!--FORM-->
-    <form>
-        <input class="box-for-name" type="name" name="name" placeholder="Введите Ваше имя">
-        <input class="box-for-name" type="name" name="surname" placeholder="Введите Вашу фамилию"><br>
-        <div style="font-weight: bold;">Какой Ваш пол?</div> 
-        <input class="checkbox" type="radio" name="sex-man" value="man" checked="checked">
-        <label for="sex-man">M</label><br>
-        <input class="checkbox" type="radio" name="sex-fem" value="fem">
-        <label for="sex-fem">Ж</label><br><br>
-        <textarea name="user-question" rows=6 cols="25" placeholder="Напишите свой вопрос"></textarea>
-        <div>
-            <select name="user-city">
-                <option selected="" disabled="">Выберите город</option>
-                <option value="Kharkiv">Kharkiv</option>
-                <option value="Kyiv">Kyiv</option>
-                <option value="Lviv">Lviv</option>
-                <option value="Odesa">Odesa</option>
-            </select>
+    <form name="userData" action="" method="post">
+        <div class="user-data">
+            <input name="firstname" type="text" placeholder="Введите Ваше имя">
+            <input name="lastname" type="text" placeholder="Введите Вашу фамилию">
         </div>
-        <div>
-            <p>Выбор языка:</p>
-            <input  checked="checked" type="checkbox" name="language" value="ukr">
-            <label>Українська</label><br>
-            <input type="checkbox" name="language" value="eng">
-            <label>English</label><br>
-            <input type="checkbox" name="language" value="rus">
-            <label>Русский</label>    
-        </div><br>
+        <div class="sex">Какой Ваш пол?<br>
+            <input id="man" name="sex" type="radio" value="man">
+            <label for="man">М</label><br>
+            <input id="fem" name="sex" type="radio" value="female" >
+            <label for="fem">Ж</label>
+        </div>
+        <textarea name="userQuestion" id="quest" cols="30" rows="10" placeholder="Напишите свой вопрос"></textarea><br>
+        <select name="city" id="city">
+            <option value="" selected disabled hidden>Выберите город</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Odesa">Odesa</option>
+        </select>
+        <div class="lang">Выбор языка:<br>
+            <label for="ukr"><input name="lang" type="checkbox" value="ukr" id="ukr">Українська</label><br>
+            <label for="rus"><input name="lang" type="checkbox" value="rus" id="rus">Русский</label><br>
+            <label for="eng"><input name="lang" type="checkbox" value="eng" id="eng">English</label><br>
+        </div>
         <input type="submit" value="Отправить">
-        </form>
-
     </form>
 </body>
 </html>
